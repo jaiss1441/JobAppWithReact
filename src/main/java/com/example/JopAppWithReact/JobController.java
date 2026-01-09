@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@CrossOrigin("")
+@CrossOrigin("localhost:3000")
 public class JobController {
 
     @Autowired
