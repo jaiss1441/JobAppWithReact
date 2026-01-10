@@ -3,10 +3,7 @@ package com.example.JopAppWithReact;
 import com.example.JopAppWithReact.model.JobPost;
 import com.example.JopAppWithReact.service.JobService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,6 +18,11 @@ public class JobController {
     @ResponseBody
     public List<JobPost> allJobPost(){
         return jobService.getallJobs();
+    }
+
+    @PostMapping
+    public String AddJob(){
+        return "New Job";
     }
 
 }
