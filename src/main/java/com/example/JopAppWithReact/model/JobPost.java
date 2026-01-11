@@ -1,8 +1,6 @@
 package com.example.JopAppWithReact.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -10,7 +8,6 @@ import java.util.List;
 @Data
 @Component
 @NoArgsConstructor
-@AllArgsConstructor
 public class JobPost {
 
 
@@ -21,4 +18,19 @@ public class JobPost {
     private List<String> postTechStack;
 
 
+    public int getPostId() {
+        return postId;
+    }
+
+    public void setPostId(int postId) {
+        this.postId = postId;
+    }
+
+    public JobPost(int postId, String postProfile, String postDesc, Integer reqExperience, List<String> postTechStack) {
+        this.postId = postId;
+        this.postProfile = postProfile;
+        this.postDesc = postDesc;
+        this.reqExperience = reqExperience;
+        this.postTechStack = postTechStack;
+    }
 }
