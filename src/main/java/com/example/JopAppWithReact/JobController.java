@@ -15,7 +15,6 @@ public class JobController {
     private JobService jobService;
 
     @GetMapping("jobPosts")
-    @ResponseBody
     public List<JobPost> allJobPost(){
         return jobService.getallJobs();
     }
