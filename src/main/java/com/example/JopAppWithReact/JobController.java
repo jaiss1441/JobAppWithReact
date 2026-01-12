@@ -23,5 +23,9 @@ public class JobController {
     public JobPost AddJob(@PathVariable("postId") int postId){
         return jobService.getJobPost(postId);
     }
+    @PostMapping()
+    public JobPost addJobs(){
+
+    }
 
 }
