@@ -30,4 +30,9 @@ public class JobController {
         jobService.addJob(jobPost);
     }
 
+    @PutMapping("jobPost")
+    public JobPost updateJob(@RequestBody JobPost jobPost){
+        jobService.updateJob(jobPost);
+        return jobService.getJobPost(jobPost.getPostId());
+    }
 }
