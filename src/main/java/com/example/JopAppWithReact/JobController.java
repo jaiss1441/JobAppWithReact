@@ -35,4 +35,6 @@ public class JobController {
         jobService.updateJob(jobPost);
         return jobService.getJobPost(jobPost.getPostId());
     }
+
+    public
 }
