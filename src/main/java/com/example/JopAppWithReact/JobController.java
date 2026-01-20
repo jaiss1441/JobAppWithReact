@@ -14,7 +14,7 @@ public class JobController {
     @Autowired
     private JobService jobService;
 
-    @GetMapping("jobPosts")
+    @GetMapping(path = "jobPosts",produces ="application/xml")
     public List<JobPost> allJobPost(){
         return jobService.getallJobs();
     }
@@ -25,7 +25,7 @@ public class JobController {
     }
 
 
-    @PostMapping("jobPost")
+    @PostMapping(path = "jobPost", consumes = "application/xml")
     public void addJobs(@RequestBody JobPost jobPost){
         jobService.addJob(jobPost);
     }
@@ -42,7 +42,5 @@ public class JobController {
         return "Deleted";
     }
 
-    public String findByTech(){
 
-    }
 }
