@@ -41,6 +41,6 @@ public class JobController {
         jobService.deleteJob(postId);
         return "Deleted";
     }
-
+public
 
 }
