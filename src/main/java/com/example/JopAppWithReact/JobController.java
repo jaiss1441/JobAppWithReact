@@ -41,6 +41,9 @@ public class JobController {
         jobService.deleteJob(postId);
         return "Deleted";
     }
-public
 
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }
