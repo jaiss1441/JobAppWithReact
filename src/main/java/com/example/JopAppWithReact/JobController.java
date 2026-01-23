@@ -44,6 +44,6 @@ public class JobController {
 
     @Override
     public String toString() {
-        return super.toString();
+
     }
 }
