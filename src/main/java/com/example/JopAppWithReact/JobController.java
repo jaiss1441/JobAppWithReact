@@ -42,8 +42,5 @@ public class JobController {
         return "Deleted";
     }
 
-    @Override
-    public String toString() {
 
-    }
 }
